@@ -120,7 +120,7 @@
 
 					<section>
 		        <div>
-		          <h2>Visual Monitoring (Mobile Emulation)</h2>
+		          <h2>Mobile Emulation</h2>
 							<div>
 								<iframe src="http://gfycat.com/ifr/DefiantIcyAlleycat" frameborder="0" scrolling="no" width="586" height="618" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
 							</div>
@@ -129,7 +129,7 @@
 
 					<section>
 		        <div>
-		          <h2>Visual Monitoring (Cross Browsers)</h2>
+		          <h2>Cross Browsers Testing</h2>
 							<div>
 							  <img src="http://www.gizra.com/assets/images/posts/shoov-travis/image2.jpg" />
 							</div>
@@ -154,7 +154,7 @@
 
 					<section>
 		        <div>
-		          <h2>Live Monitoring (Functional Tests)</h2>
+		          <h2>Functional Tests</h2>
 							<div>
 							  <img src="https://cloud.githubusercontent.com/assets/125707/10870886/624b37ce-80df-11e5-9ba6-ed070ac016b4.jpg" />
 							</div>
@@ -172,7 +172,7 @@
 
 					<section>
 		        <div>
-		          <h2>Live Monitoring (One Click Setup)</h2>
+		          <h2>One Click Setup</h2>
 							<div>
 							  <img src="https://cloud.githubusercontent.com/assets/125707/8808821/89750bb0-2fed-11e5-951e-31e1645f49bc.jpg"
 							</div>
@@ -181,7 +181,7 @@
 
 					<section>
 		        <div>
-		          <h2>Live Monitoring (Real Time Logs)</h2>
+		          <h2>Real Time Logs</h2>
 							<div>
 							  <img src="https://cloud.githubusercontent.com/assets/125707/8951238/44e7777a-35d4-11e5-9c83-662cdf189396.jpg"
 							</div>
@@ -190,26 +190,26 @@
 
 					<section>
 						<pre><code data-trim>
-		# .shoov.yml
-		addons:
-		  - selenium
+# .shoov.yml
+addons:
+  - selenium
 
-		env:
-		  # GitHub username
-		  - secure: "8a0e4139d27a8f1cec757c485eaa3ca5a038074ced07af46a90959db331a2dd8a7c8"
+env:
+  # GitHub username
+  - secure: "8a0e4139d27a8f1cec757c485eaa3ca5a038074ced07af46a90959db331a2dd8a7c8"
 
-		  # GitHub password
-		  - secure: "8a0e4139d27a8f1cec757c485eaf2eb3a1210953ec078f41ab037d93261332d58ed51849fce6258a"
+  # GitHub password
+  - secure: "8a0e4139d27a8f1cec757c485eaf2eb3a1210953ec078f41ab037d93261332d58ed51849fce6258a"
 
-		before_script:
-		  - cd behat
-		  # Instead of composer install, we save time by getting
-		  # a gzipped file with the vendor and bin directories.
-		  - tar zxf behat-vendor.tar.gz
-		  - cp behat.local.yml.shoov behat.local.yml
+before_script:
+  - cd behat
+  # Instead of composer install, we save time by getting
+  # a gzipped file with the vendor and bin directories.
+  - tar zxf behat-vendor.tar.gz
+  - cp behat.local.yml.shoov behat.local.yml
 
-		script:
-		  - ./bin/behat --tags=~wip
+script:
+  - ./bin/behat --tags=~wip
 						</code></pre>
 		      </section>
 
